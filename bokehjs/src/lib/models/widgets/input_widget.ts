@@ -29,10 +29,7 @@ export abstract class InputWidgetView extends ControlView {
     this.el.appendChild(this.group_el)
   }
 
-  change_input(): void {
-    if (this.model.callback != null)
-      this.model.callback.execute(this.model)
-  }
+  change_input(): void { }
 }
 
 export namespace InputWidget {
