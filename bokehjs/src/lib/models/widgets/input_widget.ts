@@ -1,5 +1,4 @@
 import {Control, ControlView} from "./control"
-import {CallbackLike0} from "../callbacks/callback"
 
 import {div, label} from "core/dom"
 import * as p from "core/properties"
@@ -37,7 +36,6 @@ export namespace InputWidget {
 
   export type Props = Control.Props & {
     title: p.Property<string>
-    callback: p.Property<CallbackLike0<InputWidget> | null>
   }
 }
 
@@ -53,7 +51,6 @@ export abstract class InputWidget extends Control {
   static init_InputWidget(): void {
     this.define<InputWidget.Props>({
       title:    [ p.String, "" ],
-      callback: [ p.Any        ],
     })
   }
 }
